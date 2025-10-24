@@ -6,136 +6,150 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-</html>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <h1 class="logo">My Portfolio</h1>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="contact-section">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>
-          If you have any questions, comments, or would like to get in touch,
-          please feel free to reach out using the form below:
-        </p>
-        <form id="contactForm" class="contact-form" novalidate>
-          <div
-            id="successMessage"
-            class="success-message"
-            role="alert"
-            aria-live="polite"
-            data-testid="test-contact-success"
-            style="display: none"
-          >
-            <strong>Thank you!</strong> Your message has been sent successfully.
-          </div>
-          <div class="form-group">
-            <label for="fullName"
-              >Name: <span aria-label="required">*</span></label
-            >
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              data-testid="test-contact-name"
-              required
-              aria-describedby="fullNameError"
-              placeholder="Enter Your Full Name"
-            />
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <h1 class="logo">My Portfolio</h1>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <div class="container">
+          <h2>Contact Me</h2>
+          <p>
+            If you have any questions, comments, or would like to get in touch,
+            please feel free to reach out using the form below:
+          </p>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <!-- ✅ Success Message -->
             <div
-              id="fullNameError"
-              class="error-message"
+              id="successMessage"
+              class="success-message"
               role="alert"
               aria-live="polite"
-              data-testid="test-contact-error-fullName"
-            ></div>
-          </div>
-          <div class="form-group">
-            <label for="email"
-              >Email: <span aria-label="required">*</span></label
+              data-testid="test-contact-success"
+              style="display: none"
             >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              data-testid="test-contact-email"
-              required
-              aria-describedby="emailError"
-              placeholder="Enter Your Email Address"
-            />
-            <div
-              id="emailError"
-              class="error-message"
-              data-testid="test-contact-error-email"
-              role="alert"
-            ></div>
-          </div>
-          <div class="form-group">
-            <label for="subject"
-              >Subject <span aria-label="required">*</span></label
-            >
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              data-testid="test-contact-subject"
-              required
-              aria-describedby="subjectError"
-              placeholder="How can i help you?"
-            />
-            <div
-              id="subjectError"
-              class="error-message"
-              data-testid="test-contact-error-subject"
-              role="alert"
-            ></div>
+              <strong>Thank you!</strong> Your message has been sent successfully.
+            </div>
+
+            <!-- ✅ Full Name -->
             <div class="form-group">
-              <label for="message"
-                >Message: <span aria-label="required">*</span></label
-              >
+              <label for="fullName">
+                Full Name: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                data-testid="test-contact-name"
+                required
+                aria-describedby="error-name"
+                placeholder="Enter Your Full Name"
+              />
+              <div
+                id="error-name"
+                class="error-message"
+                role="alert"
+                aria-live="polite"
+                data-testid="test-contact-error-name"
+              ></div>
+            </div>
+
+            <!-- ✅ Email -->
+            <div class="form-group">
+              <label for="email">
+                Email: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                data-testid="test-contact-email"
+                required
+                aria-describedby="error-email"
+                placeholder="Enter Your Email Address"
+              />
+              <div
+                id="error-email"
+                class="error-message"
+                role="alert"
+                data-testid="test-contact-error-email"
+              ></div>
+            </div>
+
+            <!-- ✅ Subject -->
+            <div class="form-group">
+              <label for="subject">
+                Subject: <span aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                data-testid="test-contact-subject"
+                required
+                aria-describedby="error-subject"
+                placeholder="How can I help you?"
+              />
+              <div
+                id="error-subject"
+                class="error-message"
+                role="alert"
+                data-testid="test-contact-error-subject"
+              ></div>
+            </div>
+
+            <!-- ✅ Message -->
+            <div class="form-group">
+              <label for="message">
+                Message: <span aria-label="required">*</span>
+              </label>
               <textarea
                 id="message"
                 name="message"
                 data-testid="test-contact-message"
                 required
-                aria-describedby="messageError"
+                aria-describedby="error-message"
                 placeholder="Type your message..."
                 rows="6"
               ></textarea>
               <div
-                id="messageError"
+                id="error-message"
                 class="error-message"
-                data-testid="test-contact-error-message"
                 role="alert"
+                data-testid="test-contact-error-message"
               ></div>
             </div>
+
+            <!-- ✅ Submit Button -->
             <button
               type="submit"
               class="btn btn-primary"
               data-testid="test-contact-submit"
-              s
             >
               Send Message
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 My Portfolio. @Seye</p>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 My Portfolio. @Seye</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
